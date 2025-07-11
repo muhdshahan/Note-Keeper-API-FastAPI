@@ -1,0 +1,1587 @@
+2025-07-11 16:28:27,600 - INFO - BEGIN (implicit)
+2025-07-11 16:28:27,602 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 16:28:27,603 - INFO - [raw sql] ()
+2025-07-11 16:28:27,617 - INFO - PRAGMA main.table_info("users")
+2025-07-11 16:28:27,619 - INFO - [raw sql] ()
+2025-07-11 16:28:27,622 - INFO - COMMIT
+2025-07-11 16:28:32,821 - INFO - BEGIN (implicit)
+2025-07-11 16:28:32,822 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 16:28:32,823 - INFO - [raw sql] ()
+2025-07-11 16:28:32,825 - INFO - PRAGMA main.table_info("users")
+2025-07-11 16:28:32,826 - INFO - [raw sql] ()
+2025-07-11 16:28:32,827 - INFO - COMMIT
+2025-07-11 16:41:12,833 - INFO - BEGIN (implicit)
+2025-07-11 16:41:12,833 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 16:41:12,838 - INFO - [raw sql] ()
+2025-07-11 16:41:12,846 - INFO - PRAGMA main.table_info("users")
+2025-07-11 16:41:12,846 - INFO - [raw sql] ()
+2025-07-11 16:41:12,854 - INFO - COMMIT
+2025-07-11 16:44:51,625 - INFO - BEGIN (implicit)
+2025-07-11 16:44:51,633 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password, users.role AS users_role, users.created_at AS users_created_at 
+FROM users 
+WHERE users.username = ? OR users.email = ?
+ LIMIT ? OFFSET ?
+2025-07-11 16:44:51,635 - INFO - [generated in 0.00132s] ('shahan', 'shahn@gmail.com', 1, 0)
+2025-07-11 16:44:51,644 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-07-11 16:44:52,446 - INFO - ROLLBACK
+2025-07-11 16:53:52,962 - INFO - BEGIN (implicit)
+2025-07-11 16:53:52,971 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 16:53:52,974 - INFO - [raw sql] ()
+2025-07-11 16:53:52,988 - INFO - PRAGMA main.table_info("users")
+2025-07-11 16:53:52,988 - INFO - [raw sql] ()
+2025-07-11 16:53:52,991 - INFO - COMMIT
+2025-07-11 16:53:56,366 - INFO - BEGIN (implicit)
+2025-07-11 16:53:56,368 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 16:53:56,371 - INFO - [raw sql] ()
+2025-07-11 16:53:56,373 - INFO - PRAGMA main.table_info("users")
+2025-07-11 16:53:56,374 - INFO - [raw sql] ()
+2025-07-11 16:53:56,381 - INFO - COMMIT
+2025-07-11 17:00:01,791 - ERROR - Unhandled server error
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\BROTOTYPE WEEK TASKS\WEEK 38\Project 30 - Note Keeper API\app\routers\auth.py", line 16, in register
+    if db.query(User).filter((User.username == user_data.username) | (User.email == user_data.email)).first():
+       ^^^^^^^^
+AttributeError: 'AsyncSession' object has no attribute 'query'
+2025-07-11 17:00:09,536 - ERROR - Unhandled server error
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\BROTOTYPE WEEK TASKS\WEEK 38\Project 30 - Note Keeper API\app\routers\auth.py", line 16, in register
+    if db.query(User).filter((User.username == user_data.username) | (User.email == user_data.email)).first():
+       ^^^^^^^^
+AttributeError: 'AsyncSession' object has no attribute 'query'
+2025-07-11 17:35:55,250 - INFO - BEGIN (implicit)
+2025-07-11 17:35:55,335 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 17:35:55,336 - INFO - [raw sql] ()
+2025-07-11 17:35:55,344 - INFO - PRAGMA main.table_info("users")
+2025-07-11 17:35:55,344 - INFO - [raw sql] ()
+2025-07-11 17:35:55,347 - INFO - COMMIT
+2025-07-11 17:36:24,301 - ERROR - Unhandled server error
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\BROTOTYPE WEEK TASKS\WEEK 38\Project 30 - Note Keeper API\app\routers\auth.py", line 16, in register
+    if db.query(User).filter((User.username == user_data.username) | (User.email == user_data.email)).first():
+       ^^^^^^^^
+AttributeError: 'AsyncSession' object has no attribute 'query'
+2025-07-11 17:37:50,968 - INFO - BEGIN (implicit)
+2025-07-11 17:37:50,970 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 17:37:50,973 - INFO - [raw sql] ()
+2025-07-11 17:37:50,979 - INFO - PRAGMA main.table_info("users")
+2025-07-11 17:37:50,983 - INFO - [raw sql] ()
+2025-07-11 17:37:50,990 - INFO - COMMIT
+2025-07-11 17:38:43,928 - INFO - BEGIN (implicit)
+2025-07-11 17:38:43,929 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 17:38:43,930 - INFO - [raw sql] ()
+2025-07-11 17:38:43,937 - INFO - PRAGMA main.table_info("users")
+2025-07-11 17:38:43,944 - INFO - [raw sql] ()
+2025-07-11 17:38:43,952 - INFO - COMMIT
+2025-07-11 17:39:11,309 - ERROR - Unhandled server error
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\BROTOTYPE WEEK TASKS\WEEK 38\Project 30 - Note Keeper API\app\routers\auth.py", line 16, in register
+    if db.query(User).filter((User.username == user_data.username) | (User.email == user_data.email)).first():
+       ^^^^^^^^
+AttributeError: 'AsyncSession' object has no attribute 'query'
+2025-07-11 17:40:34,488 - INFO - BEGIN (implicit)
+2025-07-11 17:40:34,489 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 17:40:34,490 - INFO - [raw sql] ()
+2025-07-11 17:40:34,494 - INFO - PRAGMA main.table_info("users")
+2025-07-11 17:40:34,501 - INFO - [raw sql] ()
+2025-07-11 17:40:34,504 - INFO - COMMIT
+2025-07-11 17:40:37,936 - INFO - BEGIN (implicit)
+2025-07-11 17:40:37,953 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ? OR users.email = ?
+2025-07-11 17:40:37,953 - INFO - [generated in 0.00182s] ('shahan', 'shaan@gmail.com')
+2025-07-11 17:40:37,962 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-07-11 17:40:38,483 - INFO - ROLLBACK
+2025-07-11 17:40:38,484 - ERROR - Unhandled server error
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\BROTOTYPE WEEK TASKS\WEEK 38\Project 30 - Note Keeper API\app\routers\auth.py", line 26, in register
+    user = User(**user_data.dict(), password=hashed)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: app.models.user.User() got multiple values for keyword argument 'password'
+2025-07-11 17:48:04,104 - INFO - BEGIN (implicit)
+2025-07-11 17:48:04,105 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 17:48:04,106 - INFO - [raw sql] ()
+2025-07-11 17:48:04,110 - INFO - PRAGMA main.table_info("users")
+2025-07-11 17:48:04,111 - INFO - [raw sql] ()
+2025-07-11 17:48:04,115 - INFO - COMMIT
+2025-07-11 17:48:07,910 - INFO - BEGIN (implicit)
+2025-07-11 17:48:07,924 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ? OR users.email = ?
+2025-07-11 17:48:07,925 - INFO - [generated in 0.00124s] ('shahan', 'shaan@gmail.com')
+2025-07-11 17:48:07,939 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-07-11 17:48:08,481 - INFO - INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?) RETURNING id, created_at
+2025-07-11 17:48:08,501 - INFO - [generated in 0.00947s] ('shahan', 'shaan@gmail.com', '$2b$12$xbxh6YMEBk/D9RVS6tCHB.2bb9SJP5mlagdje68kl86SW0MEPpQBa', 'user')
+2025-07-11 17:48:08,514 - INFO - COMMIT
+2025-07-11 17:48:08,711 - INFO - BEGIN (implicit)
+2025-07-11 17:48:08,711 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.id = ?
+2025-07-11 17:48:08,711 - INFO - [generated in 0.00123s] (1,)
+2025-07-11 17:48:08,724 - INFO - User registered: shahan
+2025-07-11 17:48:08,724 - INFO - ROLLBACK
+2025-07-11 17:49:18,076 - WARNING - Validation error: [{'type': 'string_pattern_mismatch', 'loc': ('body', 'grant_type'), 'msg': "String should match pattern '^password$'", 'input': 'shanu', 'ctx': {'pattern': '^password$'}}]
+2025-07-11 17:50:07,345 - WARNING - Validation error: [{'type': 'string_pattern_mismatch', 'loc': ('body', 'grant_type'), 'msg': "String should match pattern '^password$'", 'input': '', 'ctx': {'pattern': '^password$'}}]
+2025-07-11 17:50:19,698 - WARNING - Validation error: [{'type': 'string_pattern_mismatch', 'loc': ('body', 'grant_type'), 'msg': "String should match pattern '^password$'", 'input': '', 'ctx': {'pattern': '^password$'}}]
+2025-07-11 17:53:01,730 - INFO - BEGIN (implicit)
+2025-07-11 17:53:01,733 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 17:53:01,737 - INFO - [generated in 0.00409s] ('shahan',)
+2025-07-11 17:53:02,265 - INFO - User logged in: shahan
+2025-07-11 17:53:02,266 - INFO - ROLLBACK
+2025-07-11 17:53:47,653 - WARNING - HTTP error: Not authenticated
+2025-07-11 17:55:06,709 - WARNING - HTTP error: Not authenticated
+2025-07-11 17:55:30,648 - INFO - BEGIN (implicit)
+2025-07-11 17:55:30,648 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 17:55:30,648 - INFO - [cached since 148.9s ago] ('shahan',)
+2025-07-11 17:55:31,135 - INFO - User logged in: shahan
+2025-07-11 17:55:31,135 - INFO - ROLLBACK
+2025-07-11 18:05:04,226 - INFO - BEGIN (implicit)
+2025-07-11 18:05:04,227 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:05:04,227 - INFO - [raw sql] ()
+2025-07-11 18:05:04,230 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:05:04,230 - INFO - [raw sql] ()
+2025-07-11 18:05:04,231 - INFO - COMMIT
+2025-07-11 18:05:12,794 - INFO - BEGIN (implicit)
+2025-07-11 18:05:12,795 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:05:12,795 - INFO - [raw sql] ()
+2025-07-11 18:05:12,798 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:05:12,798 - INFO - [raw sql] ()
+2025-07-11 18:05:12,800 - INFO - COMMIT
+2025-07-11 18:05:20,893 - INFO - BEGIN (implicit)
+2025-07-11 18:05:20,900 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:05:20,900 - INFO - [generated in 0.00330s] ('shahan',)
+2025-07-11 18:05:20,910 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-07-11 18:05:21,552 - INFO - User logged in: shahan
+2025-07-11 18:05:21,552 - INFO - ROLLBACK
+2025-07-11 18:05:40,084 - INFO - BEGIN (implicit)
+2025-07-11 18:05:40,085 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:05:40,086 - INFO - [raw sql] ()
+2025-07-11 18:05:40,088 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:05:40,089 - INFO - [raw sql] ()
+2025-07-11 18:05:40,091 - INFO - COMMIT
+2025-07-11 18:05:40,325 - INFO - BEGIN (implicit)
+2025-07-11 18:05:40,331 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:05:40,331 - INFO - [generated in 0.00075s] ('shahan',)
+2025-07-11 18:05:40,339 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-07-11 18:05:40,710 - INFO - User logged in: shahan
+2025-07-11 18:05:40,711 - INFO - ROLLBACK
+2025-07-11 18:07:08,209 - INFO - BEGIN (implicit)
+2025-07-11 18:07:08,210 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:07:08,210 - INFO - [raw sql] ()
+2025-07-11 18:07:08,212 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:07:08,212 - INFO - [raw sql] ()
+2025-07-11 18:07:08,214 - INFO - COMMIT
+2025-07-11 18:07:11,919 - INFO - BEGIN (implicit)
+2025-07-11 18:07:11,920 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:07:11,920 - INFO - [raw sql] ()
+2025-07-11 18:07:11,922 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:07:11,923 - INFO - [raw sql] ()
+2025-07-11 18:07:11,925 - INFO - COMMIT
+2025-07-11 18:07:20,899 - INFO - BEGIN (implicit)
+2025-07-11 18:07:20,907 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:07:20,910 - INFO - [generated in 0.00318s] ('shahan',)
+2025-07-11 18:07:20,914 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-07-11 18:07:21,978 - INFO - User logged in: shahan
+2025-07-11 18:07:21,979 - INFO - ROLLBACK
+2025-07-11 18:08:57,451 - INFO - BEGIN (implicit)
+2025-07-11 18:08:57,452 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:08:57,452 - INFO - [cached since 96.55s ago] ('shahan',)
+2025-07-11 18:08:57,740 - INFO - User logged in: shahan
+2025-07-11 18:08:57,741 - INFO - ROLLBACK
+2025-07-11 18:09:27,096 - ERROR - Unhandled server error
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\dependencies\utils.py", line 640, in solve_dependencies
+    solved = await run_in_threadpool(call, **solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\BROTOTYPE WEEK TASKS\WEEK 38\Project 30 - Note Keeper API\app\dependencies\auth.py", line 16, in get_current_user
+    user = db.query(User).filter(User.username == token_data.username).first()
+           ^^^^^^^^
+AttributeError: 'AsyncSession' object has no attribute 'query'
+2025-07-11 18:09:54,508 - INFO - BEGIN (implicit)
+2025-07-11 18:09:54,508 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:09:54,508 - INFO - [raw sql] ()
+2025-07-11 18:09:54,508 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:09:54,508 - INFO - [raw sql] ()
+2025-07-11 18:09:54,519 - INFO - COMMIT
+2025-07-11 18:10:02,056 - ERROR - Unhandled server error
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\dependencies\utils.py", line 640, in solve_dependencies
+    solved = await run_in_threadpool(call, **solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\BROTOTYPE WEEK TASKS\WEEK 38\Project 30 - Note Keeper API\app\dependencies\auth.py", line 16, in get_current_user
+    user = db.query(User).filter(User.username == token_data.username).first()
+           ^^^^^^^^
+AttributeError: 'AsyncSession' object has no attribute 'query'
+2025-07-11 18:11:58,284 - ERROR - Unhandled server error
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\dependencies\utils.py", line 640, in solve_dependencies
+    solved = await run_in_threadpool(call, **solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\BROTOTYPE WEEK TASKS\WEEK 38\Project 30 - Note Keeper API\app\dependencies\auth.py", line 16, in get_current_user
+    user = db.query(User).filter(User.username == token_data.username).first()
+           ^^^^^^^^
+AttributeError: 'AsyncSession' object has no attribute 'query'
+2025-07-11 18:13:55,474 - INFO - BEGIN (implicit)
+2025-07-11 18:13:55,476 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:13:55,477 - INFO - [raw sql] ()
+2025-07-11 18:13:55,482 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:13:55,483 - INFO - [raw sql] ()
+2025-07-11 18:13:55,485 - INFO - COMMIT
+2025-07-11 18:13:58,333 - INFO - BEGIN (implicit)
+2025-07-11 18:13:58,339 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:13:58,340 - INFO - [generated in 0.00074s] ('shahan',)
+2025-07-11 18:13:58,345 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 18:13:58,350 - INFO - [generated in 0.00470s] (1,)
+2025-07-11 18:13:58,357 - INFO - ROLLBACK
+2025-07-11 18:13:58,359 - ERROR - Unhandled server error
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 147, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 129, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\cursor.py", line 40, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\cursor.py", line 32, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\core.py", line 122, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\core.py", line 105, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.OperationalError: no such column: notes.owner_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\BROTOTYPE WEEK TASKS\WEEK 38\Project 30 - Note Keeper API\app\routers\notes.py", line 37, in get_notes
+    result = await db.execute(select(Note).where(Note.owner_id == current_user.id))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 461, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2362, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 147, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 129, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\cursor.py", line 40, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\cursor.py", line 32, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\core.py", line 122, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\core.py", line 105, in run
+    result = function()
+             ^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: notes.owner_id
+[SQL: SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-11 18:17:14,481 - INFO - BEGIN (implicit)
+2025-07-11 18:17:14,481 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:17:14,481 - INFO - [cached since 196.1s ago] ('shahan',)
+2025-07-11 18:17:14,481 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 18:17:14,481 - INFO - [cached since 196.1s ago] (1,)
+2025-07-11 18:17:14,490 - INFO - ROLLBACK
+2025-07-11 18:17:14,495 - ERROR - Unhandled server error
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 147, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 129, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\cursor.py", line 40, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\cursor.py", line 32, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\core.py", line 122, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\core.py", line 105, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.OperationalError: no such column: notes.owner_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\BROTOTYPE WEEK TASKS\WEEK 38\Project 30 - Note Keeper API\app\routers\notes.py", line 37, in get_notes
+    result = await db.execute(select(Note).where(Note.owner_id == current_user.id))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 461, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2362, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 147, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 129, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\cursor.py", line 40, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\cursor.py", line 32, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\core.py", line 122, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiosqlite\core.py", line 105, in run
+    result = function()
+             ^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: notes.owner_id
+[SQL: SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-11 18:20:44,300 - INFO - BEGIN (implicit)
+2025-07-11 18:20:44,301 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:20:44,301 - INFO - [raw sql] ()
+2025-07-11 18:20:44,305 - INFO - PRAGMA temp.table_info("notes")
+2025-07-11 18:20:44,305 - INFO - [raw sql] ()
+2025-07-11 18:20:44,307 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:20:44,307 - INFO - [raw sql] ()
+2025-07-11 18:20:44,308 - INFO - PRAGMA temp.table_info("users")
+2025-07-11 18:20:44,308 - INFO - [raw sql] ()
+2025-07-11 18:20:44,308 - INFO - 
+CREATE TABLE users (
+	id INTEGER NOT NULL, 
+	username VARCHAR NOT NULL, 
+	email VARCHAR NOT NULL, 
+	password VARCHAR NOT NULL, 
+	role VARCHAR, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP), 
+	PRIMARY KEY (id), 
+	UNIQUE (username), 
+	UNIQUE (email)
+)
+
+
+2025-07-11 18:20:44,308 - INFO - [no key 0.00126s] ()
+2025-07-11 18:20:44,397 - INFO - CREATE INDEX ix_users_id ON users (id)
+2025-07-11 18:20:44,397 - INFO - [no key 0.00067s] ()
+2025-07-11 18:20:44,469 - INFO - 
+CREATE TABLE notes (
+	id INTEGER NOT NULL, 
+	title VARCHAR NOT NULL, 
+	content VARCHAR NOT NULL, 
+	tag VARCHAR, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP), 
+	owner_id INTEGER NOT NULL, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(owner_id) REFERENCES users (id)
+)
+
+
+2025-07-11 18:20:44,469 - INFO - [no key 0.00105s] ()
+2025-07-11 18:20:44,557 - INFO - CREATE INDEX ix_notes_id ON notes (id)
+2025-07-11 18:20:44,557 - INFO - [no key 0.00067s] ()
+2025-07-11 18:20:44,651 - INFO - COMMIT
+2025-07-11 18:20:47,662 - INFO - BEGIN (implicit)
+2025-07-11 18:20:47,663 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:20:47,664 - INFO - [raw sql] ()
+2025-07-11 18:20:47,666 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:20:47,667 - INFO - [raw sql] ()
+2025-07-11 18:20:47,669 - INFO - COMMIT
+2025-07-11 18:20:55,600 - INFO - BEGIN (implicit)
+2025-07-11 18:20:55,600 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:20:55,600 - INFO - [raw sql] ()
+2025-07-11 18:20:55,610 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:20:55,611 - INFO - [raw sql] ()
+2025-07-11 18:20:55,612 - INFO - COMMIT
+2025-07-11 18:21:00,574 - INFO - BEGIN (implicit)
+2025-07-11 18:21:00,575 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:21:00,575 - INFO - [raw sql] ()
+2025-07-11 18:21:00,577 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:21:00,577 - INFO - [raw sql] ()
+2025-07-11 18:21:00,580 - INFO - COMMIT
+2025-07-11 18:21:02,937 - INFO - BEGIN (implicit)
+2025-07-11 18:21:02,938 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:21:02,939 - INFO - [raw sql] ()
+2025-07-11 18:21:02,940 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:21:02,941 - INFO - [raw sql] ()
+2025-07-11 18:21:02,943 - INFO - COMMIT
+2025-07-11 18:21:06,235 - INFO - BEGIN (implicit)
+2025-07-11 18:21:06,235 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:21:06,235 - INFO - [raw sql] ()
+2025-07-11 18:21:06,261 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:21:06,262 - INFO - [raw sql] ()
+2025-07-11 18:21:06,266 - INFO - COMMIT
+2025-07-11 18:21:10,319 - INFO - BEGIN (implicit)
+2025-07-11 18:21:10,323 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 18:21:10,325 - INFO - [raw sql] ()
+2025-07-11 18:21:10,327 - INFO - PRAGMA main.table_info("users")
+2025-07-11 18:21:10,327 - INFO - [raw sql] ()
+2025-07-11 18:21:10,329 - INFO - COMMIT
+2025-07-11 18:21:11,138 - INFO - BEGIN (implicit)
+2025-07-11 18:21:11,143 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:21:11,143 - INFO - [generated in 0.00070s] ('shahan',)
+2025-07-11 18:21:11,146 - INFO - ROLLBACK
+2025-07-11 18:21:11,148 - WARNING - HTTP error: User not found
+2025-07-11 18:21:13,277 - INFO - BEGIN (implicit)
+2025-07-11 18:21:13,280 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:21:13,281 - INFO - [cached since 2.138s ago] ('shahan',)
+2025-07-11 18:21:13,286 - INFO - ROLLBACK
+2025-07-11 18:21:13,288 - WARNING - HTTP error: User not found
+2025-07-11 18:22:08,199 - INFO - BEGIN (implicit)
+2025-07-11 18:22:08,202 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ? OR users.email = ?
+2025-07-11 18:22:08,203 - INFO - [generated in 0.00144s] ('shahan', 'shahan@gmail.com')
+2025-07-11 18:22:08,211 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-07-11 18:22:08,561 - INFO - INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?) RETURNING id, created_at
+2025-07-11 18:22:08,562 - INFO - [generated in 0.00123s] ('shahan', 'shahan@gmail.com', '$2b$12$HGRdy3tz51IBsTA1aAkHwu.Eh.WB2TIC7KxSRHp0yhiZgjtRRt5OG', 'user')
+2025-07-11 18:22:08,868 - INFO - COMMIT
+2025-07-11 18:22:09,096 - INFO - BEGIN (implicit)
+2025-07-11 18:22:09,098 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.id = ?
+2025-07-11 18:22:09,099 - INFO - [generated in 0.00063s] (1,)
+2025-07-11 18:22:09,101 - INFO - User registered: shahan
+2025-07-11 18:22:09,101 - INFO - ROLLBACK
+2025-07-11 18:22:26,688 - INFO - BEGIN (implicit)
+2025-07-11 18:22:26,688 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:22:26,688 - INFO - [cached since 75.55s ago] ('shahan',)
+2025-07-11 18:22:26,996 - INFO - User logged in: shahan
+2025-07-11 18:22:26,996 - INFO - ROLLBACK
+2025-07-11 18:22:55,763 - WARNING - HTTP error: Not authenticated
+2025-07-11 18:23:09,894 - INFO - BEGIN (implicit)
+2025-07-11 18:23:09,895 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:23:09,896 - INFO - [cached since 118.8s ago] ('shahan',)
+2025-07-11 18:23:10,201 - INFO - User logged in: shahan
+2025-07-11 18:23:10,202 - INFO - ROLLBACK
+2025-07-11 18:23:26,959 - INFO - BEGIN (implicit)
+2025-07-11 18:23:26,960 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:23:26,961 - INFO - [cached since 135.8s ago] ('shahan',)
+2025-07-11 18:23:26,964 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 18:23:26,968 - INFO - [generated in 0.00099s] (1,)
+2025-07-11 18:23:26,972 - INFO - ROLLBACK
+2025-07-11 18:24:22,379 - INFO - BEGIN (implicit)
+2025-07-11 18:24:22,382 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:24:22,384 - INFO - [cached since 191.2s ago] ('shahan',)
+2025-07-11 18:24:22,394 - INFO - INSERT INTO notes (title, content, tag, owner_id) VALUES (?, ?, ?, ?) RETURNING id, created_at
+2025-07-11 18:24:22,395 - INFO - [generated in 0.00113s] ('Shahans Life', 'This is a secret file', 'Lovely', 1)
+2025-07-11 18:24:22,700 - INFO - COMMIT
+2025-07-11 18:24:22,923 - INFO - BEGIN (implicit)
+2025-07-11 18:24:22,924 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.id = ?
+2025-07-11 18:24:22,925 - INFO - [generated in 0.00058s] (1,)
+2025-07-11 18:24:22,927 - INFO - Note created by shahan
+2025-07-11 18:24:22,927 - INFO - ROLLBACK
+2025-07-11 18:24:29,972 - INFO - BEGIN (implicit)
+2025-07-11 18:24:29,974 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:24:29,975 - INFO - [cached since 198.8s ago] ('shahan',)
+2025-07-11 18:24:29,981 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 18:24:29,984 - INFO - [cached since 63.02s ago] (1,)
+2025-07-11 18:24:29,989 - INFO - ROLLBACK
+2025-07-11 18:24:54,115 - INFO - BEGIN (implicit)
+2025-07-11 18:24:54,116 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:24:54,118 - INFO - [cached since 223s ago] ('shahan',)
+2025-07-11 18:24:54,155 - INFO - INSERT INTO notes (title, content, tag, owner_id) VALUES (?, ?, ?, ?) RETURNING id, created_at
+2025-07-11 18:24:54,168 - INFO - [cached since 31.78s ago] ('Goode', 'Keep peace', 'Good', 1)
+2025-07-11 18:24:54,460 - INFO - COMMIT
+2025-07-11 18:24:54,595 - INFO - BEGIN (implicit)
+2025-07-11 18:24:54,595 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.id = ?
+2025-07-11 18:24:54,595 - INFO - [cached since 31.68s ago] (2,)
+2025-07-11 18:24:54,595 - INFO - Note created by shahan
+2025-07-11 18:24:54,595 - INFO - ROLLBACK
+2025-07-11 18:25:01,569 - INFO - BEGIN (implicit)
+2025-07-11 18:25:01,570 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:25:01,570 - INFO - [cached since 230.4s ago] ('shahan',)
+2025-07-11 18:25:01,573 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 18:25:01,574 - INFO - [cached since 94.61s ago] (1,)
+2025-07-11 18:25:01,579 - INFO - ROLLBACK
+2025-07-11 18:25:36,704 - INFO - BEGIN (implicit)
+2025-07-11 18:25:36,709 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:25:36,710 - INFO - [cached since 265.6s ago] ('shahan',)
+2025-07-11 18:25:36,717 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.id = ?
+2025-07-11 18:25:36,718 - INFO - [generated in 0.00071s] (1,)
+2025-07-11 18:25:36,728 - INFO - UPDATE notes SET title=?, content=? WHERE notes.id = ?
+2025-07-11 18:25:36,730 - INFO - [generated in 0.00293s] ("shahan's life", 'This is secret', 1)
+2025-07-11 18:25:37,040 - INFO - COMMIT
+2025-07-11 18:25:37,276 - INFO - BEGIN (implicit)
+2025-07-11 18:25:37,277 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.id = ?
+2025-07-11 18:25:37,277 - INFO - [cached since 74.35s ago] (1,)
+2025-07-11 18:25:37,279 - INFO - ROLLBACK
+2025-07-11 18:25:44,614 - INFO - BEGIN (implicit)
+2025-07-11 18:25:44,615 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:25:44,616 - INFO - [cached since 273.5s ago] ('shahan',)
+2025-07-11 18:25:44,619 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 18:25:44,620 - INFO - [cached since 137.7s ago] (1,)
+2025-07-11 18:25:44,625 - INFO - ROLLBACK
+2025-07-11 18:26:44,789 - INFO - BEGIN (implicit)
+2025-07-11 18:26:44,789 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ? OR users.email = ?
+2025-07-11 18:26:44,827 - INFO - [cached since 276.6s ago] ('nihal', 'nihal@gmail.com')
+2025-07-11 18:26:45,182 - INFO - INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?) RETURNING id, created_at
+2025-07-11 18:26:45,232 - INFO - [cached since 276.7s ago] ('nihal', 'nihal@gmail.com', '$2b$12$lyTWz4HV0veYtWAUHN8zWe.1/5UuEVJEJJypxavQrAVBG7Fl8n58e', 'user')
+2025-07-11 18:26:45,236 - INFO - COMMIT
+2025-07-11 18:26:45,465 - INFO - BEGIN (implicit)
+2025-07-11 18:26:45,465 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.id = ?
+2025-07-11 18:26:45,465 - INFO - [cached since 276.4s ago] (2,)
+2025-07-11 18:26:45,465 - INFO - User registered: nihal
+2025-07-11 18:26:45,465 - INFO - ROLLBACK
+2025-07-11 18:27:23,647 - INFO - BEGIN (implicit)
+2025-07-11 18:27:23,647 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:27:23,647 - INFO - [cached since 372.5s ago] ('nihal',)
+2025-07-11 18:27:23,947 - INFO - User logged in: nihal
+2025-07-11 18:27:23,947 - INFO - ROLLBACK
+2025-07-11 18:27:32,483 - INFO - BEGIN (implicit)
+2025-07-11 18:27:32,484 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:27:32,485 - INFO - [cached since 381.3s ago] ('nihal',)
+2025-07-11 18:27:32,488 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 18:27:32,488 - INFO - [cached since 245.5s ago] (2,)
+2025-07-11 18:27:32,490 - INFO - ROLLBACK
+2025-07-11 18:34:17,646 - WARNING - HTTP error: Not authenticated
+2025-07-11 18:40:39,203 - WARNING - HTTP error: Not Found
+2025-07-11 18:40:43,907 - WARNING - HTTP error: Method Not Allowed
+2025-07-11 18:41:51,351 - WARNING - HTTP error: Not authenticated
+2025-07-11 18:42:01,951 - WARNING - HTTP error: Not authenticated
+2025-07-11 18:42:04,952 - WARNING - HTTP error: Not authenticated
+2025-07-11 18:43:14,143 - WARNING - HTTP error: Not authenticated
+2025-07-11 18:54:41,137 - WARNING - HTTP error: Not Found
+2025-07-11 18:54:52,519 - WARNING - Validation error: [{'type': 'missing', 'loc': ('body',), 'msg': 'Field required', 'input': None}]
+2025-07-11 18:55:09,032 - WARNING - Validation error: [{'type': 'missing', 'loc': ('body',), 'msg': 'Field required', 'input': None}]
+2025-07-11 18:56:41,618 - WARNING - Validation error: [{'type': 'model_attributes_type', 'loc': ('body',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': b'username=sinan&email=sinan%40gmail.com&password=sinan'}]
+2025-07-11 18:56:41,619 - ERROR - Unhandled server error
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 346, in app
+    raise validation_error
+fastapi.exceptions.RequestValidationError: [{'type': 'model_attributes_type', 'loc': ('body',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': b'username=sinan&email=sinan%40gmail.com&password=sinan'}]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 59, in wrapped_app
+    response = await handler(conn, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\BROTOTYPE WEEK TASKS\WEEK 38\Project 30 - Note Keeper API\app\core\exception_handlers.py", line 12, in validation_exception_handler
+    return JSONResponse(
+           ^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\responses.py", line 182, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\responses.py", line 45, in __init__
+    self.body = self.render(content)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\responses.py", line 185, in render
+    return json.dumps(
+           ^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+2025-07-11 18:57:26,004 - INFO - BEGIN (implicit)
+2025-07-11 18:57:26,007 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ? OR users.email = ?
+2025-07-11 18:57:26,016 - INFO - [cached since 2118s ago] ('string', 'user@example.com')
+2025-07-11 18:57:26,503 - INFO - INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?) RETURNING id, created_at
+2025-07-11 18:57:26,503 - INFO - [cached since 2118s ago] ('string', 'user@example.com', '$2b$12$hyRE.26P/t4GxL59hrS1L.XzDd.YyuSv/JInOnFDrlr3JSCT5uUA6', 'user')
+2025-07-11 18:57:26,511 - INFO - COMMIT
+2025-07-11 18:57:26,703 - INFO - BEGIN (implicit)
+2025-07-11 18:57:26,703 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.id = ?
+2025-07-11 18:57:26,703 - INFO - [cached since 2118s ago] (3,)
+2025-07-11 18:57:26,711 - INFO - User registered: string
+2025-07-11 18:57:26,712 - INFO - ROLLBACK
+2025-07-11 18:58:32,376 - INFO - BEGIN (implicit)
+2025-07-11 18:58:32,377 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ? OR users.email = ?
+2025-07-11 18:58:32,377 - INFO - [cached since 2184s ago] ('sinan', 'sinan@gmail.com')
+2025-07-11 18:58:32,792 - INFO - INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?) RETURNING id, created_at
+2025-07-11 18:58:32,793 - INFO - [cached since 2184s ago] ('sinan', 'sinan@gmail.com', '$2b$12$cXoLP15NUYE.5oLnFFdbBO3PQ5LQccLEl9.1KFXeveqwtPh.8tgAK', 'user')
+2025-07-11 18:58:33,094 - INFO - COMMIT
+2025-07-11 18:58:33,372 - INFO - BEGIN (implicit)
+2025-07-11 18:58:33,373 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.id = ?
+2025-07-11 18:58:33,374 - INFO - [cached since 2184s ago] (4,)
+2025-07-11 18:58:33,377 - INFO - User registered: sinan
+2025-07-11 18:58:33,378 - INFO - ROLLBACK
+2025-07-11 18:59:20,056 - WARNING - Validation error: [{'type': 'missing', 'loc': ('body', 'username'), 'msg': 'Field required', 'input': None}, {'type': 'missing', 'loc': ('body', 'password'), 'msg': 'Field required', 'input': None}]
+2025-07-11 18:59:40,566 - INFO - BEGIN (implicit)
+2025-07-11 18:59:40,567 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 18:59:40,569 - INFO - [cached since 2309s ago] ('sinan',)
+2025-07-11 18:59:40,997 - INFO - User logged in: sinan
+2025-07-11 18:59:40,998 - INFO - ROLLBACK
+2025-07-11 19:03:15,624 - WARNING - Validation error: [{'type': 'json_invalid', 'loc': ('body', 61), 'msg': 'JSON decode error', 'input': {}, 'ctx': {'error': 'Expecting property name enclosed in double quotes'}}]
+2025-07-11 19:03:48,193 - WARNING - Validation error: [{'type': 'json_invalid', 'loc': ('body', 74), 'msg': 'JSON decode error', 'input': {}, 'ctx': {'error': 'Expecting property name enclosed in double quotes'}}]
+2025-07-11 19:03:54,485 - INFO - BEGIN (implicit)
+2025-07-11 19:03:54,485 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:03:54,485 - INFO - [cached since 2563s ago] ('sinan',)
+2025-07-11 19:03:54,485 - INFO - ROLLBACK
+2025-07-11 19:03:54,497 - WARNING - Validation error: [{'type': 'missing', 'loc': ('body', 'title'), 'msg': 'Field required', 'input': {'id': 1, 'topic': 'Newone', 'content': 'Join the party'}}]
+2025-07-11 19:04:26,994 - INFO - BEGIN (implicit)
+2025-07-11 19:04:26,995 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:04:26,998 - INFO - [cached since 2596s ago] ('sinan',)
+2025-07-11 19:04:27,002 - INFO - ROLLBACK
+2025-07-11 19:04:27,006 - WARNING - Validation error: [{'type': 'missing', 'loc': ('body', 'title'), 'msg': 'Field required', 'input': {'topic': 'Newone', 'content': 'Join the party', 'tag': 'Super'}}]
+2025-07-11 19:04:33,632 - INFO - BEGIN (implicit)
+2025-07-11 19:04:33,633 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:04:33,635 - INFO - [cached since 2602s ago] ('sinan',)
+2025-07-11 19:04:33,637 - INFO - ROLLBACK
+2025-07-11 19:04:33,639 - WARNING - Validation error: [{'type': 'missing', 'loc': ('body', 'title'), 'msg': 'Field required', 'input': {'topic': 'Newone', 'content': 'Join the party', 'tags': 'Super'}}]
+2025-07-11 19:04:47,511 - INFO - BEGIN (implicit)
+2025-07-11 19:04:47,512 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:04:47,513 - INFO - [cached since 2616s ago] ('sinan',)
+2025-07-11 19:04:47,518 - INFO - INSERT INTO notes (title, content, tag, owner_id) VALUES (?, ?, ?, ?) RETURNING id, created_at
+2025-07-11 19:04:47,518 - INFO - [cached since 2425s ago] ('Newone', 'Join the party', 'Super', 4)
+2025-07-11 19:04:47,524 - INFO - COMMIT
+2025-07-11 19:04:47,705 - INFO - BEGIN (implicit)
+2025-07-11 19:04:47,708 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.id = ?
+2025-07-11 19:04:47,710 - INFO - [cached since 2425s ago] (3,)
+2025-07-11 19:04:47,713 - INFO - Note created by sinan
+2025-07-11 19:04:47,713 - INFO - ROLLBACK
+2025-07-11 19:04:59,067 - INFO - BEGIN (implicit)
+2025-07-11 19:04:59,068 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:04:59,068 - INFO - [cached since 2628s ago] ('sinan',)
+2025-07-11 19:04:59,072 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.id = ?
+2025-07-11 19:04:59,075 - INFO - [cached since 2362s ago] (1,)
+2025-07-11 19:04:59,082 - INFO - ROLLBACK
+2025-07-11 19:04:59,084 - WARNING - HTTP error: Not authorized to view this note
+2025-07-11 19:05:07,027 - INFO - BEGIN (implicit)
+2025-07-11 19:05:07,027 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:05:07,027 - INFO - [cached since 2636s ago] ('sinan',)
+2025-07-11 19:05:07,027 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 19:05:07,027 - INFO - [cached since 2500s ago] (4,)
+2025-07-11 19:05:07,027 - INFO - ROLLBACK
+2025-07-11 19:08:08,169 - INFO - BEGIN (implicit)
+2025-07-11 19:08:08,184 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:08:08,186 - INFO - [cached since 2817s ago] ('shahan',)
+2025-07-11 19:08:08,653 - INFO - User logged in: shahan
+2025-07-11 19:08:08,655 - INFO - ROLLBACK
+2025-07-11 19:08:29,770 - INFO - BEGIN (implicit)
+2025-07-11 19:08:29,772 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:08:29,773 - INFO - [cached since 2839s ago] ('shahan',)
+2025-07-11 19:08:29,776 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 19:08:29,777 - INFO - [cached since 2703s ago] (1,)
+2025-07-11 19:08:29,780 - INFO - ROLLBACK
+2025-07-11 19:26:00,958 - INFO - BEGIN (implicit)
+2025-07-11 19:26:01,035 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 19:26:01,035 - INFO - [raw sql] ()
+2025-07-11 19:26:01,045 - INFO - PRAGMA main.table_info("users")
+2025-07-11 19:26:01,045 - INFO - [raw sql] ()
+2025-07-11 19:26:01,047 - INFO - COMMIT
+2025-07-11 19:26:47,494 - INFO - BEGIN (implicit)
+2025-07-11 19:26:47,495 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 19:26:47,496 - INFO - [raw sql] ()
+2025-07-11 19:26:47,498 - INFO - PRAGMA main.table_info("users")
+2025-07-11 19:26:47,499 - INFO - [raw sql] ()
+2025-07-11 19:26:47,501 - INFO - COMMIT
+2025-07-11 19:33:52,080 - INFO - BEGIN (implicit)
+2025-07-11 19:33:52,082 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 19:33:52,083 - INFO - [raw sql] ()
+2025-07-11 19:33:52,096 - INFO - PRAGMA main.table_info("users")
+2025-07-11 19:33:52,097 - INFO - [raw sql] ()
+2025-07-11 19:33:52,099 - INFO - COMMIT
+2025-07-11 19:36:12,959 - INFO - BEGIN (implicit)
+2025-07-11 19:36:12,960 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 19:36:12,962 - INFO - [raw sql] ()
+2025-07-11 19:36:12,965 - INFO - PRAGMA main.table_info("users")
+2025-07-11 19:36:12,966 - INFO - [raw sql] ()
+2025-07-11 19:36:12,968 - INFO - COMMIT
+2025-07-11 19:36:30,778 - INFO - BEGIN (implicit)
+2025-07-11 19:36:30,778 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 19:36:30,778 - INFO - [raw sql] ()
+2025-07-11 19:36:30,788 - INFO - PRAGMA main.table_info("users")
+2025-07-11 19:36:30,790 - INFO - [raw sql] ()
+2025-07-11 19:36:30,792 - INFO - COMMIT
+2025-07-11 19:36:49,887 - INFO - BEGIN (implicit)
+2025-07-11 19:36:49,894 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:36:49,894 - INFO - [generated in 0.00061s] ('shahan',)
+2025-07-11 19:36:49,904 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 19:36:49,904 - INFO - [generated in 0.00118s] (1,)
+2025-07-11 19:36:49,921 - INFO - ROLLBACK
+2025-07-11 19:36:51,600 - INFO - BEGIN (implicit)
+2025-07-11 19:36:51,601 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:36:51,601 - INFO - [cached since 1.705s ago] ('shahan',)
+2025-07-11 19:36:51,609 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 19:36:51,609 - INFO - [cached since 1.697s ago] (1,)
+2025-07-11 19:36:51,613 - INFO - ROLLBACK
+2025-07-11 19:36:53,139 - INFO - BEGIN (implicit)
+2025-07-11 19:36:53,139 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:36:53,139 - INFO - [cached since 3.251s ago] ('shahan',)
+2025-07-11 19:36:53,139 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 19:36:53,139 - INFO - [cached since 3.237s ago] (1,)
+2025-07-11 19:36:53,139 - INFO - ROLLBACK
+2025-07-11 19:36:54,729 - INFO - BEGIN (implicit)
+2025-07-11 19:36:54,729 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:36:54,730 - INFO - [cached since 4.833s ago] ('shahan',)
+2025-07-11 19:36:54,732 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 19:36:54,733 - INFO - [cached since 4.82s ago] (1,)
+2025-07-11 19:36:54,735 - INFO - ROLLBACK
+2025-07-11 19:36:56,251 - INFO - BEGIN (implicit)
+2025-07-11 19:36:56,252 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:36:56,253 - INFO - [cached since 6.357s ago] ('shahan',)
+2025-07-11 19:36:56,258 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 19:36:56,259 - INFO - [cached since 6.346s ago] (1,)
+2025-07-11 19:36:56,263 - INFO - ROLLBACK
+2025-07-11 19:36:57,477 - INFO - BEGIN (implicit)
+2025-07-11 19:36:57,478 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:36:57,478 - INFO - [cached since 7.582s ago] ('shahan',)
+2025-07-11 19:36:57,480 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /notes/
+2025-07-11 19:36:57,481 - INFO - ROLLBACK
+2025-07-11 19:37:17,398 - INFO - BEGIN (implicit)
+2025-07-11 19:37:17,398 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 19:37:17,399 - INFO - [raw sql] ()
+2025-07-11 19:37:17,406 - INFO - PRAGMA main.table_info("users")
+2025-07-11 19:37:17,406 - INFO - [raw sql] ()
+2025-07-11 19:37:17,409 - INFO - COMMIT
+2025-07-11 19:37:21,498 - INFO - BEGIN (implicit)
+2025-07-11 19:37:21,505 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 19:37:21,506 - INFO - [raw sql] ()
+2025-07-11 19:37:21,509 - INFO - PRAGMA main.table_info("users")
+2025-07-11 19:37:21,509 - INFO - [raw sql] ()
+2025-07-11 19:37:21,512 - INFO - COMMIT
+2025-07-11 19:41:06,676 - WARNING - Validation error: [{'type': 'missing', 'loc': ('body',), 'msg': 'Field required', 'input': None}]
+2025-07-11 19:43:19,852 - INFO - BEGIN (implicit)
+2025-07-11 19:43:19,860 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ? OR users.email = ?
+2025-07-11 19:43:19,861 - INFO - [generated in 0.00064s] ('amal', 'amal@gmail.com')
+2025-07-11 19:43:19,871 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\shaha\AppData\Local\Programs\Python\Python312\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-07-11 19:43:20,271 - INFO - INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?) RETURNING id, created_at
+2025-07-11 19:43:20,273 - INFO - [generated in 0.00162s] ('amal', 'amal@gmail.com', '$2b$12$Ha9mD.B.0Y2FKDxV3I5Jz.MAGZ1cO8ZNAEYkbycxsdBewHgGvBKkG', 'user')
+2025-07-11 19:43:20,573 - INFO - COMMIT
+2025-07-11 19:43:21,059 - INFO - BEGIN (implicit)
+2025-07-11 19:43:21,065 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.id = ?
+2025-07-11 19:43:21,069 - INFO - [generated in 0.00369s] (5,)
+2025-07-11 19:43:21,074 - INFO - User registered: amal
+2025-07-11 19:43:21,079 - INFO - ROLLBACK
+2025-07-11 19:44:19,837 - WARNING - Validation error: [{'type': 'missing', 'loc': ('body', 'username'), 'msg': 'Field required', 'input': None}, {'type': 'missing', 'loc': ('body', 'password'), 'msg': 'Field required', 'input': None}]
+2025-07-11 19:44:27,652 - WARNING - Validation error: [{'type': 'missing', 'loc': ('body', 'username'), 'msg': 'Field required', 'input': None}]
+2025-07-11 19:44:56,789 - INFO - BEGIN (implicit)
+2025-07-11 19:44:56,789 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:44:56,789 - INFO - [generated in 0.00052s] ('amal',)
+2025-07-11 19:44:57,192 - INFO - User logged in: amal
+2025-07-11 19:44:57,192 - INFO - ROLLBACK
+2025-07-11 19:46:23,724 - INFO - BEGIN (implicit)
+2025-07-11 19:46:23,725 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ? OR users.email = ?
+2025-07-11 19:46:23,730 - INFO - [cached since 183.9s ago] ('sonu', 'sonu@gmail.com')
+2025-07-11 19:46:24,093 - INFO - INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?) RETURNING id, created_at
+2025-07-11 19:46:24,097 - INFO - [cached since 183.8s ago] ('sonu', 'sonu@gmail.com', '$2b$12$UieLWgO0eu/RbkC/jqdC8uOSwKwczVO39woUzI9Ih/GmPEp6tOct.', 'user')
+2025-07-11 19:46:24,395 - INFO - COMMIT
+2025-07-11 19:46:24,638 - INFO - BEGIN (implicit)
+2025-07-11 19:46:24,639 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.id = ?
+2025-07-11 19:46:24,641 - INFO - [cached since 183.6s ago] (6,)
+2025-07-11 19:46:24,646 - INFO - User registered: sonu
+2025-07-11 19:46:24,650 - INFO - ROLLBACK
+2025-07-11 19:46:56,112 - INFO - BEGIN (implicit)
+2025-07-11 19:46:56,113 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:46:56,114 - INFO - [cached since 119.3s ago] ('sonu',)
+2025-07-11 19:46:56,452 - INFO - User logged in: sonu
+2025-07-11 19:46:56,453 - INFO - ROLLBACK
+2025-07-11 19:47:13,985 - WARNING - HTTP error: Not authenticated
+2025-07-11 19:47:27,211 - INFO - BEGIN (implicit)
+2025-07-11 19:47:27,212 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:47:27,212 - INFO - [cached since 150.4s ago] ('sonu',)
+2025-07-11 19:47:27,216 - INFO - ROLLBACK
+2025-07-11 19:47:27,217 - WARNING - Validation error: [{'type': 'missing', 'loc': ('body',), 'msg': 'Field required', 'input': None}]
+2025-07-11 19:48:12,186 - INFO - BEGIN (implicit)
+2025-07-11 19:48:12,187 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:48:12,188 - INFO - [cached since 195.4s ago] ('sonu',)
+2025-07-11 19:48:12,193 - INFO - INSERT INTO notes (title, content, tag, owner_id) VALUES (?, ?, ?, ?) RETURNING id, created_at
+2025-07-11 19:48:12,194 - INFO - [generated in 0.00068s] ('sonus', 'My NOtes', 'Lovely', 6)
+2025-07-11 19:48:12,489 - INFO - COMMIT
+2025-07-11 19:48:12,763 - INFO - BEGIN (implicit)
+2025-07-11 19:48:12,771 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.id = ?
+2025-07-11 19:48:12,774 - INFO - [generated in 0.00251s] (4,)
+2025-07-11 19:48:12,778 - INFO - Note created by sonu
+2025-07-11 19:48:12,778 - INFO - ROLLBACK
+2025-07-11 19:48:21,859 - INFO - BEGIN (implicit)
+2025-07-11 19:48:21,860 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:48:21,860 - INFO - [cached since 205.1s ago] ('sonu',)
+2025-07-11 19:48:21,867 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 19:48:21,869 - INFO - [generated in 0.00209s] (6,)
+2025-07-11 19:48:21,874 - INFO - ROLLBACK
+2025-07-11 19:48:56,919 - INFO - BEGIN (implicit)
+2025-07-11 19:48:56,920 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:48:56,922 - INFO - [cached since 240.1s ago] ('amal',)
+2025-07-11 19:48:57,302 - INFO - User logged in: amal
+2025-07-11 19:48:57,302 - INFO - ROLLBACK
+2025-07-11 19:49:52,896 - INFO - BEGIN (implicit)
+2025-07-11 19:49:52,898 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:49:52,899 - INFO - [cached since 296.1s ago] ('amal',)
+2025-07-11 19:49:52,902 - INFO - INSERT INTO notes (title, content, tag, owner_id) VALUES (?, ?, ?, ?) RETURNING id, created_at
+2025-07-11 19:49:52,905 - INFO - [cached since 100.7s ago] ('amals', 'My not', 'Phone', 5)
+2025-07-11 19:49:53,200 - INFO - COMMIT
+2025-07-11 19:49:53,463 - INFO - BEGIN (implicit)
+2025-07-11 19:49:53,465 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.id = ?
+2025-07-11 19:49:53,466 - INFO - [cached since 100.7s ago] (5,)
+2025-07-11 19:49:53,469 - INFO - Note created by amal
+2025-07-11 19:49:53,472 - INFO - ROLLBACK
+2025-07-11 19:49:58,197 - INFO - BEGIN (implicit)
+2025-07-11 19:49:58,198 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:49:58,199 - INFO - [cached since 301.4s ago] ('amal',)
+2025-07-11 19:49:58,201 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 19:49:58,202 - INFO - [cached since 96.34s ago] (5,)
+2025-07-11 19:49:58,214 - INFO - ROLLBACK
+2025-07-11 19:50:04,839 - INFO - BEGIN (implicit)
+2025-07-11 19:50:04,840 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:50:04,841 - INFO - [cached since 308s ago] ('sonu',)
+2025-07-11 19:50:04,846 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 19:50:04,847 - INFO - [cached since 103s ago] (6,)
+2025-07-11 19:50:04,850 - INFO - ROLLBACK
+2025-07-11 19:50:10,357 - INFO - BEGIN (implicit)
+2025-07-11 19:50:10,359 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:50:10,361 - INFO - [cached since 313.6s ago] ('amal',)
+2025-07-11 19:50:10,364 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 19:50:10,365 - INFO - [cached since 108.5s ago] (5,)
+2025-07-11 19:50:10,367 - INFO - ROLLBACK
+2025-07-11 19:50:11,860 - INFO - BEGIN (implicit)
+2025-07-11 19:50:11,861 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:50:11,862 - INFO - [cached since 315.1s ago] ('amal',)
+2025-07-11 19:50:11,866 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 19:50:11,866 - INFO - [cached since 110s ago] (5,)
+2025-07-11 19:50:11,874 - INFO - ROLLBACK
+2025-07-11 19:50:13,292 - INFO - BEGIN (implicit)
+2025-07-11 19:50:13,293 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:50:13,293 - INFO - [cached since 316.5s ago] ('amal',)
+2025-07-11 19:50:13,297 - INFO - SELECT notes.id, notes.title, notes.content, notes.tag, notes.created_at, notes.owner_id 
+FROM notes 
+WHERE notes.owner_id = ?
+2025-07-11 19:50:13,297 - INFO - [cached since 111.4s ago] (5,)
+2025-07-11 19:50:13,300 - INFO - ROLLBACK
+2025-07-11 19:50:14,822 - INFO - BEGIN (implicit)
+2025-07-11 19:50:14,824 - INFO - SELECT users.id, users.username, users.email, users.password, users.role, users.created_at 
+FROM users 
+WHERE users.username = ?
+2025-07-11 19:50:14,825 - INFO - [cached since 318s ago] ('amal',)
+2025-07-11 19:50:14,829 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /notes/
+2025-07-11 19:50:14,829 - INFO - ROLLBACK
+2025-07-11 20:17:51,317 - INFO - BEGIN (implicit)
+2025-07-11 20:17:51,413 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 20:17:51,414 - INFO - [raw sql] ()
+2025-07-11 20:17:51,420 - INFO - PRAGMA main.table_info("users")
+2025-07-11 20:17:51,421 - INFO - [raw sql] ()
+2025-07-11 20:17:51,423 - INFO - COMMIT
+2025-07-11 20:17:56,831 - INFO - BEGIN (implicit)
+2025-07-11 20:17:56,832 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 20:17:56,833 - INFO - [raw sql] ()
+2025-07-11 20:17:56,836 - INFO - PRAGMA main.table_info("users")
+2025-07-11 20:17:56,838 - INFO - [raw sql] ()
+2025-07-11 20:17:56,840 - INFO - COMMIT
+2025-07-11 20:18:01,222 - INFO - BEGIN (implicit)
+2025-07-11 20:18:01,222 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 20:18:01,222 - INFO - [raw sql] ()
+2025-07-11 20:18:01,241 - INFO - PRAGMA main.table_info("users")
+2025-07-11 20:18:01,242 - INFO - [raw sql] ()
+2025-07-11 20:18:01,244 - INFO - COMMIT
+2025-07-11 20:18:06,405 - INFO - BEGIN (implicit)
+2025-07-11 20:18:06,406 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 20:18:06,407 - INFO - [raw sql] ()
+2025-07-11 20:18:06,409 - INFO - PRAGMA main.table_info("users")
+2025-07-11 20:18:06,410 - INFO - [raw sql] ()
+2025-07-11 20:18:06,517 - INFO - COMMIT
+2025-07-11 20:18:11,006 - INFO - BEGIN (implicit)
+2025-07-11 20:18:11,006 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 20:18:11,007 - INFO - [raw sql] ()
+2025-07-11 20:18:11,010 - INFO - PRAGMA main.table_info("users")
+2025-07-11 20:18:11,015 - INFO - [raw sql] ()
+2025-07-11 20:18:11,017 - INFO - COMMIT
+2025-07-11 20:28:02,466 - INFO - BEGIN (implicit)
+2025-07-11 20:28:02,469 - INFO - PRAGMA main.table_info("notes")
+2025-07-11 20:28:02,469 - INFO - [raw sql] ()
+2025-07-11 20:28:02,469 - INFO - PRAGMA main.table_info("users")
+2025-07-11 20:28:02,469 - INFO - [raw sql] ()
+2025-07-11 20:28:02,476 - INFO - COMMIT
